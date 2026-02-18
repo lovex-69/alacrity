@@ -1,9 +1,9 @@
 const services = [
     {
-        icon: "🤖",
+        iconId: "automation",
         title: "AI Automation Solutions",
         description:
-            "Eliminate manual work. Deploy intelligent agents that handle interactions, qualify leads, and streamline operations 24/7.",
+            "Eliminate manual work. Deploy intelligent agents that handle interactions, qualify leads, and streamline operations around the clock.",
         features: [
             "AI Chatbots & Virtual Assistants",
             "WhatsApp & Messaging Automation",
@@ -12,7 +12,7 @@ const services = [
         ],
     },
     {
-        icon: "💻",
+        iconId: "web",
         title: "Website & Funnel Development",
         description:
             "Revenue-focused websites and funnels engineered for conversions, not vanity metrics. Every pixel earns its place.",
@@ -24,7 +24,7 @@ const services = [
         ],
     },
     {
-        icon: "📱",
+        iconId: "app",
         title: "Product & App Development",
         description:
             "From MVP to scale-ready platforms, we build software products that users love and investors fund.",
@@ -36,7 +36,7 @@ const services = [
         ],
     },
     {
-        icon: "📈",
+        iconId: "growth",
         title: "Growth Systems",
         description:
             "Data-driven growth engines that compound over time. Turn traffic into revenue with precision optimization.",

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { writeToSheet, isGoogleSheetsConfigured } from "@/lib/googleSheets";
 
 export async function POST(request) {
     try {
@@ -14,27 +14,19 @@ export async function POST(request) {
             );
         }
 
-        // If Supabase is configured, store in database
-        if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-            const { error } = await supabase.from("contacts").insert([
-                {
-                    name,
-                    email,
-                    business_type: business,
-                    message,
-                    created_at: new Date().toISOString(),
-                },
-            ]);
+        // Write to Google Sheets if configured
+        if (isGoogleSheetsConfigured()) {
+            const result = await writeToSheet("contact", {
+                name,
+                email,
+                business,
+                message,
+            });
 
-            if (error) {
-                console.error("Supabase insert error:", error);
-                // Don't fail the request — log the error but still return success
-                // so the form doesn't break before Supabase is configured
+            if (!result.success) {
+                console.error("Google Sheets write error:", result.message);
             }
         }
-
-        // TODO: Add email notification (e.g., Resend, SendGrid, or Nodemailer)
-        // await sendNotificationEmail({ name, email, business, message });
 
         return NextResponse.json(
             { success: true, message: "Contact form submitted successfully" },

@@ -1,0 +1,49 @@
+/**
+ * Google Sheets integration via Google Apps Script web app.
+ * 
+ * This is a zero-dependency approach — no npm packages needed.
+ * The Apps Script web app receives POST requests and writes to the Sheet.
+ * 
+ * Setup:
+ * 1. Create a Google Sheet
+ * 2. Extensions → Apps Script → paste the code from APPS_SCRIPT_CODE.js
+ * 3. Deploy → Web App → set access to "Anyone"
+ * 4. Copy the URL to .env.local as GOOGLE_SCRIPT_URL
+ */
+
+const SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
+
+/**
+ * Check if Google Sheets integration is configured.
+ */
+export function isGoogleSheetsConfigured() {
+    return Boolean(SCRIPT_URL);
+}
+
+/**
+ * Send data to the Google Apps Script web app.
+ * 
+ * @param {"contact" | "newsletter"} action - Which sheet to write to
+ * @param {object} data - The form data to send
+ * @returns {{ success: boolean, message?: string }}
+ */
+export async function writeToSheet(action, data) {
+    if (!SCRIPT_URL) {
+        console.log("[Google Sheets] Not configured — skipping write");
+        return { success: false, message: "not_configured" };
+    }
+
+    try {
+        const res = await fetch(SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action, ...data }),
+        });
+
+        const result = await res.json();
+        return result;
+    } catch (error) {
+        console.error(`[Google Sheets] Error:`, error.message);
+        return { success: false, message: error.message };
+    }
+}

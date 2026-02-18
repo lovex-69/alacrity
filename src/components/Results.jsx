@@ -1,36 +1,36 @@
-const results = [
+const capabilities = [
     {
         badge: "E-Commerce",
-        name: "ShoplyPro",
+        title: "Revenue-Engineered Stores",
         description:
-            "Rebuilt their entire digital funnel with AI-powered upsell automation and a conversion-optimized storefront.",
+            "We build e-commerce platforms with AI-powered product recommendations, automated email flows, and checkout optimization designed to maximize average order value and lifetime revenue.",
         metrics: [
-            { value: "+312%", label: "Revenue Growth" },
-            { value: "4.8x", label: "ROAS" },
+            { value: "3x", label: "Avg. Conversion Uplift" },
+            { value: "< 6 wks", label: "Delivery Time" },
         ],
         cardClass: "card-sage",
         badgeClass: "",
     },
     {
-        badge: "SaaS",
-        name: "FlowMetrics",
+        badge: "SaaS & Apps",
+        title: "Product-Led Growth Platforms",
         description:
-            "Designed and developed their MVP platform with automated onboarding, reducing churn and tripling activation.",
+            "From MVP to scale — we design and develop SaaS applications with automated onboarding, in-app analytics, and growth loops that drive adoption and reduce churn.",
         metrics: [
-            { value: "+540%", label: "User Activation" },
-            { value: "-67%", label: "Churn Rate" },
+            { value: "Full Stack", label: "End-to-End" },
+            { value: "Data-Led", label: "Every Decision" },
         ],
         cardClass: "card-yellow",
         badgeClass: "",
     },
     {
-        badge: "Service Business",
-        name: "EliteCoach",
+        badge: "AI Automation",
+        title: "24/7 Lead Machines",
         description:
-            "Built an AI chatbot and automated lead funnel that books qualified calls on autopilot — zero manual effort.",
+            "AI chatbots, automated lead qualification, and CRM integrations that book qualified calls on autopilot — so your team focuses on closing, not chasing.",
         metrics: [
-            { value: "+189%", label: "Qualified Leads" },
-            { value: "24/7", label: "Automated" },
+            { value: "24/7", label: "Always-On" },
+            { value: "Zero", label: "Manual Work" },
         ],
         cardClass: "card-dark",
         badgeClass: "badge-light",
@@ -42,25 +42,25 @@ export default function Results() {
         <section className="section results" id="results">
             <div className="container">
                 <div className="section-header reveal">
-                    <span className="section-tag">Proven Results</span>
+                    <span className="section-tag">What We Build</span>
                     <h2 className="section-title">
-                        Real Businesses.{" "}
-                        <span className="text-outline">Real Revenue.</span>
+                        Systems Designed for{" "}
+                        <span className="text-outline">Real Growth.</span>
                     </h2>
                     <p className="section-desc">
-                        We measure success in one currency: growth.
+                        Every project is built to generate measurable business outcomes.
                     </p>
                 </div>
                 <div className="results-grid">
-                    {results.map((r) => (
+                    {capabilities.map((r) => (
                         <div
                             className={`result-card ${r.cardClass} reveal`}
-                            key={r.name}
+                            key={r.title}
                         >
                             <span className={`result-badge ${r.badgeClass}`}>
                                 {r.badge}
                             </span>
-                            <h3>{r.name}</h3>
+                            <h3>{r.title}</h3>
                             <p>{r.description}</p>
                             <div className="result-metrics">
                                 {r.metrics.map((m) => (
@@ -75,7 +75,10 @@ export default function Results() {
                 </div>
                 <div className="results-cta reveal">
                     <a href="#contact" className="btn btn-dark btn-lg">
-                        Get Results Like These →
+                        Start Your Project
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </a>
                 </div>
             </div>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nexusforge.agency/sitemap.xml
+Sitemap: https://alacrity.agency/sitemap.xml

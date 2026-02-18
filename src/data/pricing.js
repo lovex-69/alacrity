@@ -1,14 +1,14 @@
 const pricing = [
     {
         tier: "Starter",
-        price: "$2,500",
-        period: "/project",
+        price: "₹49,999",
+        period: " onwards",
         description:
-            "Perfect for startups and small businesses needing a powerful launch.",
+            "Perfect for startups and small businesses needing a powerful digital presence.",
         features: [
-            "High-converting landing page",
+            "High-converting landing page or website",
             "Mobile-responsive design",
-            "Basic SEO optimization",
+            "Basic SEO setup",
             "Contact form integration",
             "2 rounds of revisions",
             "14-day delivery",
@@ -19,8 +19,8 @@ const pricing = [
     },
     {
         tier: "Growth",
-        price: "$7,500",
-        period: "/project",
+        price: "₹1,49,999",
+        period: " onwards",
         description:
             "For businesses ready to automate, scale, and dominate their market.",
         features: [
@@ -28,7 +28,7 @@ const pricing = [
             "AI chatbot integration",
             "CRM & email automation",
             "Advanced SEO & analytics",
-            "Conversion optimization",
+            "Conversion rate optimization",
             "Unlimited revisions",
             "30-day delivery",
             "60-day post-launch support",
@@ -44,13 +44,13 @@ const pricing = [
         description:
             "Full-scale digital transformation for ambitious companies.",
         features: [
-            "Custom web application / SaaS",
+            "Custom web application or SaaS platform",
             "Full AI automation suite",
             "Custom dashboards & analytics",
             "Mobile app development",
             "Dedicated growth strategist",
             "Priority support & SLA",
-            "Ongoing optimization",
+            "Ongoing optimization & maintenance",
         ],
         cta: "Get Proposal",
         popular: false,

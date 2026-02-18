@@ -8,7 +8,7 @@ const problemItems = [
 
 const solutionItems = [
     "AI chatbots qualifying & booking leads 24/7",
-    "Revenue-engineered funnels that print money",
+    "Revenue-engineered funnels that convert",
     "Unified automation stack — zero waste",
     "Scale with systems, not headcount",
     "Real-time analytics driving every decision",
@@ -22,12 +22,18 @@ export default function ProblemSolution() {
                     <span className="section-tag">Why Most Businesses Struggle</span>
                     <h2 className="section-title">
                         The Old Way vs.{" "}
-                        <span className="text-outline">The NexusForge</span> Way
+                        <span className="text-outline">The Alacrity</span> Way
                     </h2>
                 </div>
                 <div className="pvs-grid">
                     <div className="pvs-card problem reveal">
-                        <h3>❌ Without NexusForge</h3>
+                        <h3>
+                            <svg className="pvs-icon pvs-icon-problem" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                            Without Alacrity
+                        </h3>
                         <ul>
                             {problemItems.map((item) => (
                                 <li key={item}>{item}</li>
@@ -35,7 +41,12 @@ export default function ProblemSolution() {
                         </ul>
                     </div>
                     <div className="pvs-card solution reveal">
-                        <h3>✅ With NexusForge</h3>
+                        <h3>
+                            <svg className="pvs-icon pvs-icon-solution" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            With Alacrity
+                        </h3>
                         <ul>
                             {solutionItems.map((item) => (
                                 <li key={item}>{item}</li>

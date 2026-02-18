@@ -20,7 +20,7 @@ export default function ScrollReveal() {
 
         // Staggered reveals for grids
         const staggerContainers = document.querySelectorAll(
-            ".services-grid, .process-grid, .results-grid, .why-grid, .testimonials-grid, .pricing-grid"
+            ".services-grid, .process-grid, .results-grid, .why-grid, .testimonials-grid, .pricing-grid, .portfolio-grid"
         );
         staggerContainers.forEach((container) => {
             const children = container.querySelectorAll(".reveal");

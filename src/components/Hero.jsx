@@ -107,7 +107,7 @@ export default function Hero() {
                             <div className="mock-dashboard">
                                 <div className="mock-card sage">
                                     <div className="mock-label">Monthly Revenue</div>
-                                    <div className="mock-value">$247K</div>
+                                    <div className="mock-value">₹24.7L</div>
                                     <div className="mock-chart">
                                         <div className="mock-bar" style={{ height: "35%" }}></div>
                                         <div className="mock-bar" style={{ height: "50%" }}></div>
