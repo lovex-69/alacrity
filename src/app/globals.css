@@ -1300,7 +1300,6 @@ img {
 
 .faq-item.active {
   box-shadow: none;
-  transform: translate(4px, 4px);
 }
 
 .faq-question {

@@ -20,10 +20,10 @@ export default function FAQ() {
                         Questions? <span className="text-outline">Answered.</span>
                     </h2>
                 </div>
-                <div className="faq-list">
+                <div className="faq-list reveal">
                     {faqData.map((item, i) => (
                         <div
-                            className={`faq-item reveal${activeIndex === i ? " active" : ""}`}
+                            className={`faq-item${activeIndex === i ? " active" : ""}`}
                             key={i}
                         >
                             <button
