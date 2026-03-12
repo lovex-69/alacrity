@@ -2463,3 +2463,158 @@ img {
     width: 100%;
   }
 }
+
+/* ---------- MOBILE RESPONSIVENESS ---------- */
+@media (max-width: 768px) {
+  /* Hide desktop CTA in nav */
+  .nav-cta {
+    display: none;
+  }
+
+  /* Hamburger Menu Toggle */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--yellow);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-bottom: var(--border);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links-cta-mobile {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  /* Section Spacing */
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  /* Hero Adjustments */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .mock-dashboard {
+    grid-template-columns: 1fr;
+  }
+  
+  /* PVS Grid */
+  .pvs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio Grid */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Process Grid (Dark Layout) */
+  .process-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .process-connector {
+    width: 2px;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: -1rem;
+  }
+
+  .process-step {
+    max-width: 400px;
+    padding: 1rem;
+  }
+
+  /* Results Grid */
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Why Us */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials Grid */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pricing Grid */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Adjustments */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* ROI Grid */
+  .roi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-summary {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer Adjustments */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-contact-info,
+  .footer-socials {
+    align-items: center;
+    justify-content: center;
+  }
+}
